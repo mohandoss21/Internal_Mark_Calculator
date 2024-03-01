@@ -7,7 +7,10 @@ function Home() {
       <nav>
       <h1>Internal Mark Prediction</h1>
       </nav>
+      <div class='form-body'>
       <Form/>
+      </div>
+      
     </div>
     
   )
