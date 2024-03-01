@@ -9,7 +9,7 @@ export default function Form() {
     let cat2 = parseInt(document.getElementById('cat2').value) ;
     let a1 = parseInt(document.getElementById('a1').value) ;
     let a2 = parseInt(document.getElementById('a2').value) ;
-    if(!cat1 || !cat2 || !a1 || !a2){
+    if((!cat1 || !cat2 || !a1 || !a2) && (cat1!=0 && cat2!=0 && a1!=0 && a2!=0) ) {
        document.getElementById('error').innerHTML='Enter All the Values'
        setErr(true);
     }
