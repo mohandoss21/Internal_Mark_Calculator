@@ -14,7 +14,7 @@ export default function Form() {
        setErr(true);
     }
     else if(cat1>60 || cat2>60){
-      document.getElementById('error').innerHTML='Maximum Marks for Cat is 60'
+      document.getElementById('error').innerHTML='Maximum Marks for Cat is 60';
       setErr(true);
     }
     else if(a1>40 || a2>40){
