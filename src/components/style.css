@@ -32,6 +32,28 @@ form{
   margin-top: 50px;
   padding-top: 30px;
 }
+.button-box{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.b1,.b2{
+  height: 60px;
+  width: 150px;
+  margin-top: 20px;
+  border-width: 1px;
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: mediumaquamarine;
+  cursor: pointer;
+}
+.b1:hover{
+  box-shadow: 10px 10px 10px;
+}
+.b2:hover{
+  box-shadow: 10px 10px 10px;
+}
 input{
   width: 450px;
   height: 30px;

@@ -1,29 +1,28 @@
 import React, { useState } from 'react';
 import './style.css';
 
-export default function Form() {
+export default function Form2() {
   const [result, setResult] = useState(null);
   const [error,setErr] = useState(false);
   function submit() {
     let cat1 = parseInt(document.getElementById('cat1').value) ;
     let cat2 = parseInt(document.getElementById('cat2').value) ;
-    let a1 = parseInt(document.getElementById('a1').value) ;
-    let a2 = parseInt(document.getElementById('a2').value) ;
-    if((!cat1 || !cat2 || !a1 || !a2) && (cat1!=0 && cat2!=0 && a1!=0 && a2!=0) ) {
+    let lab = parseInt(document.getElementById('lab').value) ;
+    if((!cat1 || !cat2 || !lab) && (cat1!=0 && cat2!=0 && lab!=0) ) {
        document.getElementById('error').innerHTML='Enter All the Values'
        setErr(true);
     }
-    else if(cat1>60 || cat2>60){
-      document.getElementById('error').innerHTML='Maximum Marks for Cat is 60';
+    else if(cat1>50 || cat2>50){
+      document.getElementById('error').innerHTML='Maximum Marks for Cat is 50';
       setErr(true);
     }
-    else if(a1>40 || a2>40){
-      document.getElementById('error').innerHTML='Maximum Marks for Assignment is 40'
+    else if(lab>30){
+      document.getElementById('error').innerHTML='Maximum Marks for Model lab is 30';
       setErr(true);
     }
     else{
       document.getElementById('error').innerHTML='Done'
-      let totalMarks = (((cat1 + a1) + (cat2 + a2)) / 200) * 40;
+      let totalMarks = (((cat1 +cat2) / 100) * 20) + lab;
       setErr(false);
       setResult(totalMarks.toFixed(1));
 
@@ -35,9 +34,8 @@ export default function Form() {
     <div>
       <form>
         Cat 1:<input type="number" id='cat1' placeholder='enter your marks' />
-        Assignment 1:<input type="number" id='a1' placeholder='enter your marks' />
         Cat 2:<input type="number" id='cat2' placeholder='enter your marks' />
-        Assignment 2:<input type="number" id='a2' placeholder='enter your marks' />
+        Model Lab:<input type="number" id='lab' placeholder='enter your marks' />
         <button type="button" onClick={submit}>Submit</button>
         <p id='result'>{result !== null && error!=true? `Your Internal Mark For this Subject is: ${result}`:''}</p>
         <p id='error'></p>
