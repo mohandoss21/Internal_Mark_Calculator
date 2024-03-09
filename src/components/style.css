@@ -20,7 +20,6 @@ nav {
   background-position: center;
 }
 
-
 h1{
   padding-left: 50px;
 }
@@ -37,7 +36,7 @@ form{
   justify-content: center;
   gap: 20px;
 }
-.b1,.b2{
+.b1,.b2,.b3{
   height: 60px;
   width: 150px;
   margin-top: 20px;
@@ -52,6 +51,9 @@ form{
   box-shadow: 10px 10px 10px;
 }
 .b2:hover{
+  box-shadow: 10px 10px 10px;
+}
+.b3:hover{
   box-shadow: 10px 10px 10px;
 }
 input{
