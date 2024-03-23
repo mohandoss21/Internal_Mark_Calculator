@@ -38,7 +38,7 @@ export default function Form1() {
         Assignment 1:<input type="number" id='a1' placeholder='enter your marks' />
         Cat 2:<input type="number" id='cat2' placeholder='enter your marks' />
         Assignment 2:<input type="number" id='a2' placeholder='enter your marks' />
-        <button type="button" onClick={submit}>Submit</button>
+        <button type="button" className='submit'  onClick={submit}>Submit</button>
         <p id='result'>{result !== null && error!=true? `Your Internal Mark For this Subject is: ${result}`:''}</p>
         <p id='error'></p>
       </form>

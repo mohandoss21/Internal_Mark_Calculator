@@ -33,7 +33,7 @@ export default function Form3() {
       <form>
          Abservation Cum Record:<input type="number" id='Abservation_cum_record' placeholder='enter your marks' />
         Model Lab:<input type="number" id='model_lab' placeholder='enter your marks' />
-        <button type="button" onClick={submit}>Submit</button>
+        <button type="button"className='submit' onClick={submit}>Submit</button>
         <p id='result'>{result !== null && error!=true? `Your Internal Mark For this Subject is: ${result}`:''}</p>
         <p id='error'></p>
       </form>

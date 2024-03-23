@@ -36,7 +36,7 @@ export default function Form2() {
         Cat 1:<input type="number" id='cat1' placeholder='enter your marks' />
         Cat 2:<input type="number" id='cat2' placeholder='enter your marks' />
         Model Lab:<input type="number" id='lab' placeholder='enter your marks' />
-        <button type="button" onClick={submit}>Submit</button>
+        <button type="button" className='submit' onClick={submit}>Submit</button>
         <p id='result'>{result !== null && error!=true? `Your Internal Mark For this Subject is: ${result}`:''}</p>
         <p id='error'></p>
       </form>
