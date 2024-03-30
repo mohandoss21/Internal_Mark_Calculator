@@ -29,14 +29,24 @@ export default function Form2() {
     }
     
   }
+  function reset(){
+    let placeholder="Enter Your Marks";
+    document.getElementById('cat1').value=placeholder ;
+    document.getElementById('cat2').value=placeholder ;
+    document.getElementById('lab').value=placeholder ;
+    
+  }
 
   return (
     <div>
       <form>
-        Cat 1:<input type="number" id='cat1' placeholder='enter your marks' />
-        Cat 2:<input type="number" id='cat2' placeholder='enter your marks' />
-        Model Lab:<input type="number" id='lab' placeholder='enter your marks' />
-        <button type="button" className='submit' onClick={submit}>Submit</button>
+        Cat 1:<input type="number" id='cat1' placeholder='Enter Your Marks' />
+        Cat 2:<input type="number" id='cat2' placeholder='Enter Your Marks' />
+        Model Lab:<input type="number" id='lab' placeholder='Enter Your Marks' />
+        <div className='output-box'>
+        <button type="button" className='submit'  onClick={submit}>Submit</button>
+        <button type="button" className='reset'  onClick={reset}>Reset</button>
+        </div>
         <p id='result'>{result !== null && error!=true? `Your Internal Mark For this Subject is: ${result}`:''}</p>
         <p id='error'></p>
       </form>

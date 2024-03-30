@@ -27,13 +27,22 @@ export default function Form3() {
     }
     
   }
-
+function reset(){
+    let placeholder="Enter Your Marks";
+    document.getElementById('Abservation_cum_record').value=placeholder ;
+    document.getElementById('cat2').value=placeholder ;
+    document.getElementById('model_ab').value=placeholder ;
+    
+}
   return (
     <div>
       <form>
-         Abservation Cum Record:<input type="number" id='Abservation_cum_record' placeholder='enter your marks' />
-        Model Lab:<input type="number" id='model_lab' placeholder='enter your marks' />
-        <button type="button"className='submit' onClick={submit}>Submit</button>
+         Abservation Cum Record:<input type="number" id='Abservation_cum_record' placeholder='Enter Your Marks' />
+        Model Lab:<input type="number" id='model_lab' placeholder='Enter Your Marks' />
+        <div className='output-box'>
+        <button type="button" className='submit'  onClick={submit}>Submit</button>
+        <button type="button" className='reset'  onClick={reset}>Reset</button>
+        </div>
         <p id='result'>{result !== null && error!=true? `Your Internal Mark For this Subject is: ${result}`:''}</p>
         <p id='error'></p>
       </form>
